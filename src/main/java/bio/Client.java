@@ -25,7 +25,7 @@ public class Client {
             Socket socket = new Socket();
             socket.connect(new InetSocketAddress(Server.ip, Server.port));
 
-            Thread.sleep(1000);
+            Thread.sleep(1000);//模拟客户端阻塞
             socket.getOutputStream().write("hello world".getBytes());
 
 
